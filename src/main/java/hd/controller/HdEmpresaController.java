@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-public class HelpdeskController {
+public class HdEmpresaController {
 
     @Autowired
    private EmpresasRepository empresasRepository;
@@ -93,7 +93,7 @@ public class HelpdeskController {
     }
 
     @GetMapping("/empresas/{id}")
-    public String editTutorial(@PathVariable("id") Integer id, Model model, RedirectAttributes redirectAttributes) {
+    public String editTutorial(@PathVariable("id") String id, Model model, RedirectAttributes redirectAttributes) {
         try {
             HdEmpresas tutorial = empresasRepository.findById(id).get();
 
@@ -110,7 +110,7 @@ public class HelpdeskController {
 
 
     @GetMapping("/empresas/delete/{id}")
-    public String deleteTutorial(@PathVariable("id") Integer id, Model model, RedirectAttributes redirectAttributes) {
+    public String deleteTutorial(@PathVariable("id") String id, Model model, RedirectAttributes redirectAttributes) {
         try {
             empresasRepository.deleteById(id);
 

@@ -6,8 +6,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
     <title>BezKoder - Spring Boot Thymeleaf example</title>
 
+    <link rel="stylesheet" type="text/css" th:href="@{/css/hd.css}" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/blue-grey.css}" />
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+          integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
     <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
 </head>
@@ -26,18 +32,36 @@
 
             <div class="p-3">
                 <div class="form-group row">
-                    <label class="col-sm-3 col-form-label" for="codigo">Codigo</label>
+                    <label class="col-sm-3 col-form-label" for="email">email</label>
                     <div class="col-sm-9">
-                        <input type="text" th:field="*{codigo}" required minlength="2" maxlength="128" class="form-control"
-                               id="codigo" />
+                        <input type="text" th:field="*{email}" required minlength="2" maxlength="128" class="form-control"
+                               id="email" />
                     </div>
                 </div>
 
                 <div class="form-group row">
-                    <label class="col-sm-3 col-form-label" for="descripcion">Description</label>
+                    <label class="col-sm-3 col-form-label" for="descripcion">Deparment/Area</label>
                     <div class="col-sm-9">
                         <input type="text" th:field="*{descripcion}" minlength="2" maxlength="256" class="form-control"
                                id="descripcion" />
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" for="passwordEn">Password</label>
+                    <div class="col-sm-9">
+                        <input type="password" th:field="*{passwordEn}" minlength="2" maxlength="256" class="form-control"
+                               id="passwordEn" />
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" for="REpasswordEn">Re-Password</label>
+                    <div class="col-sm-9">
+                        <input type="password"  minlength="2" maxlength="256" class="form-control"
+                               id="REpasswordEn" />
                     </div>
                 </div>
 

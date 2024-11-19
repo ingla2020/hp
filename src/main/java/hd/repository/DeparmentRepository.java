@@ -10,6 +10,5 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 @Transactional
-public interface EmpresasRepository extends JpaRepository<HdEmpresas, String> {
-    Page<HdEmpresas> findByDescripcionContainingIgnoreCase(String keyword, Pageable pageable);
+public interface DeparmentRepository extends JpaRepository<HdDepartment, String> {
 }
